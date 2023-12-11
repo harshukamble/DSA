@@ -1,0 +1,19 @@
+def reverseWords(s):
+    list1=[]
+    end=len(s)
+    start=0
+    while start<len(s)-1:
+        # print(start)
+        if s[start]==" ":
+            start+=1
+        elif s[start]!=" ":
+            end1=s.index(" ",start)
+            list1.append(s[start:end1])
+            start=end1+1
+    # print(list1)
+    list1=list1[-1::-1]
+    newstring=" ".join(list1)
+    return newstring
+a="     harshadip          haridas       kamble       "  
+re=reverseWords(a)
+print(re)
